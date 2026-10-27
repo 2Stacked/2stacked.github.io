@@ -4,7 +4,7 @@ url: https://2stacked.github.io
 baseurl: ""
 contact_email: mail@husseindev.com
 # GitHub Sponsors profile; leave empty until it's approved, and the home pages hide the sponsor section.
-sponsor_url: ""
+sponsor_url: "https://github.com/sponsors/husseinsakr"
 markdown: kramdown
 encoding: utf-8
 

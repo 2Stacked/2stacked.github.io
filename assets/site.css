@@ -53,7 +53,8 @@ img { max-width: 100%; height: auto; }
 .brand img { border-radius: 9px; }
 
 h1 { font-size: 1.8rem; line-height: 1.2; margin: 28px 0 4px; }
-h2 { font-size: 1.2rem; margin-top: 28px; }
+h2 { font-size: 1.3rem; margin-top: 32px; }
+h3 { font-size: 1.05rem; margin: 22px 0 4px; }
 
 .updated, .site-footer { color: var(--muted); font-size: 0.9rem; }
 

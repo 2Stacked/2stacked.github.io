@@ -7,10 +7,12 @@ require "pathname"
 
 ROOT = Pathname(__dir__).parent
 SITE = ROOT / "_site"
-ALLOWED_PREFIXES = ["/", "#", "mailto:", "https://2stacked.github.io", "https://apps.apple.com"].freeze
+ALLOWED_PREFIXES = ["/", "#", "mailto:", "https://2stacked.github.io", "https://apps.apple.com", "https://www.apple.com/legal/"].freeze
 LANGS = %w[en fr].freeze
 
-EXPECTED_PAGES = ["/", "/fr/", "/404.html"].freeze
+APP_PAGES = ["", "privacy/", "support/"].freeze
+EXPECTED_PAGES = (["/", "/fr/", "/404.html"] +
+  %w[propertyledger].flat_map { |app| APP_PAGES.flat_map { |p| ["/#{app}/#{p}", "/#{app}/fr/#{p}"] } }).freeze
 
 def file_for(url)
   path = url.sub(%r{\Ahttps://2stacked\.github\.io}, "")
@@ -43,6 +45,13 @@ pages.each do |file|
     value = attr.value
     next if ALLOWED_PREFIXES.any? { |p| value.start_with?(p) } || !value.match?(%r{\A[a-z]+:|\A//}i)
     failures << "#{url}: off-site #{attr.name}=#{value}"
+  end
+
+  if url.end_with?("/privacy/")
+    text = doc.at("main")&.text.to_s
+    failures << "#{url}: privacy page doesn't name 2Stacked Development" unless text.include?("2Stacked Development")
+    failures << "#{url}: privacy page has no mailto:mail@husseindev.com link" unless doc.at('main a[href="mailto:mail@husseindev.com"]')
+    failures << "#{url}: privacy page has no last-updated date" unless doc.at("main .updated time[datetime]")
   end
 
   next if url == "/404.html"

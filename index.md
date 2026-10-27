@@ -2,11 +2,15 @@
 lang: en
 permalink: /
 translation: /fr/
-description: 2Stacked Development is Hussein Sakr, a solo developer building apps, web services and the cloud setup behind them.
+description: 2Stacked Development is an independent studio run by a single developer, building privacy-first software.
 ---
 
-2Stacked Development is Hussein Sakr, a solo developer. I build software end to end: apps, web services, the cloud
-setup they run on, and tools that put AI to work. The same person designs, builds and supports every one of them.
+2Stacked Development is an independent software studio run by a single developer, building privacy-first
+software from the app to the cloud behind it.
+
+Privacy-first means your data stays yours: it stays on your device or in storage you control, and nothing is
+collected, tracked or sold. There are no ads, and no accounts unless one is truly needed. PropertyLedger for iPhone is the first
+release, with more to come.
 
 ## Apps
 

@@ -5,12 +5,14 @@ translation: /fr/
 description: 2Stacked Development is an independent studio run by a single developer, building privacy-first software.
 ---
 
-2Stacked Development is an independent software studio run by a single developer, building privacy-first
-software from the app to the cloud behind it.
+2Stacked Development is an independent software studio with a mission to build technology that makes a meaningful
+difference in people's lives. As a one-person studio, I focus on creating practical, thoughtfully designed software
+that solves real problems, challenges unnecessary complexity, and puts people first.
 
-Privacy-first means your data stays yours: it stays on your device or in storage you control, and nothing is
-collected, tracked or sold. There are no ads, and no accounts unless one is truly needed. PropertyLedger for iPhone is the first
-release, with more to come.
+Privacy is at the heart of everything I build. Your data belongs to you, not to advertisers or the companies behind
+your software. I believe great software shouldn't come at the cost of your privacy, so I build with data
+minimization in mind: keeping information on your device or in storage you control, with no unnecessary tracking,
+data collection, or selling of personal information. No ads, and no accounts unless they're genuinely needed.
 
 ## Apps
 

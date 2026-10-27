@@ -7,7 +7,7 @@ require "pathname"
 
 ROOT = Pathname(__dir__).parent
 SITE = ROOT / "_site"
-ALLOWED_PREFIXES = ["/", "#", "mailto:", "https://2stacked.github.io/", "https://apps.apple.com/", "https://www.apple.com/legal/"].freeze
+ALLOWED_PREFIXES = ["/", "#", "mailto:", "https://2stacked.github.io/", "https://apps.apple.com/", "https://www.apple.com/legal/", "https://github.com/sponsors/"].freeze
 LANGS = %w[en fr].freeze
 
 APP_PAGES = ["", "privacy/", "support/"].freeze
@@ -46,6 +46,13 @@ pages.each do |file|
     off_site = value.start_with?("//") || (value.match?(/\A[a-z][a-z0-9+.-]*:/i) && ALLOWED_PREFIXES.none? { |p| value.start_with?(p) })
     next unless off_site
     failures << "#{url}: off-site #{attr.name}=#{value}"
+  end
+
+  if ["/", "/fr/"].include?(url)
+    main = doc.at("main")
+    sponsor = main&.at('a[href^="https://github.com/sponsors/"]')
+    contact = main&.at('a[href="mailto:mail@husseindev.com"]')
+    failures << "#{url}: home page has neither a sponsor link nor the contact address" unless sponsor || contact
   end
 
   if url.end_with?("/privacy/")

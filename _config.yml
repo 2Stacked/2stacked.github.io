@@ -1,8 +1,10 @@
 title: 2Stacked Development
-description: Apps by 2Stacked Development.
+description: 2Stacked Development is Hussein Sakr, a solo developer building apps, web services and the cloud setup behind them.
 url: https://2stacked.github.io
 baseurl: ""
 contact_email: mail@husseindev.com
+# GitHub Sponsors profile; leave empty until it's approved, and the home pages hide the sponsor section.
+sponsor_url: ""
 markdown: kramdown
 encoding: utf-8
 

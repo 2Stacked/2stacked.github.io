@@ -1,6 +1,7 @@
 # One entry per app. The key is the app's folder and URL slug.
 propertyledger:
   name: PropertyLedger
+  platform: iPhone
   tagline:
     en: "The record of everything about your home."
     fr: "Le dossier de tout ce qui concerne votre maison."

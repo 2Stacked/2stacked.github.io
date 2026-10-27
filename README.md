@@ -53,3 +53,8 @@ or third-party SDKs change, update its `privacy.md` and `fr/privacy.md` in the s
 on both.
 
 The contact address lives only in `_config.yml` (`contact_email`).
+
+## Sponsor link
+
+The home pages show a "Support the work" section only when `sponsor_url` in `_config.yml` is set. Once the
+GitHub Sponsors profile is approved, set it to `https://github.com/sponsors/husseinsakr` and push.

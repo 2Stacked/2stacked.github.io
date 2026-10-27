@@ -1,0 +1,15 @@
+# Words the layout itself uses, per page language.
+en:
+  home: "2Stacked Development"
+  support: "Support"
+  privacy: "Privacy"
+  last_updated: "Last updated"
+  other_language: "Français"
+  contact: "Contact"
+fr:
+  home: "2Stacked Development"
+  support: "Assistance"
+  privacy: "Confidentialité"
+  last_updated: "Dernière mise à jour"
+  other_language: "English"
+  contact: "Contact"

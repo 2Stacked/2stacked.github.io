@@ -1,0 +1,21 @@
+title: 2Stacked Development
+description: Apps by 2Stacked Development.
+url: https://2stacked.github.io
+baseurl: ""
+contact_email: mail@husseindev.com
+markdown: kramdown
+encoding: utf-8
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - docs
+  - README.md
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

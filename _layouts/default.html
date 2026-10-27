@@ -1,0 +1,54 @@
+{%- assign strings = site.data.strings[page.lang] -%}
+{%- assign app = site.data.apps[page.app] -%}
+{%- if page.lang == "fr" -%}{%- assign lang_path = "fr/" -%}{%- else -%}{%- assign lang_path = "" -%}{%- endif -%}
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ app.name | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  {%- if page.translation %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" href="{{ page.translation | absolute_url }}">
+  {%- endif %}
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    {%- if app %}
+    <a class="brand" href="{{ '/' | append: page.app | append: '/' | append: lang_path | relative_url }}">
+      <img src="{{ app.icon | relative_url }}" alt="" width="40" height="40">
+      <span>{{ app.name }}</span>
+    </a>
+    {%- else %}
+    <a class="brand" href="{{ '/' | append: lang_path | relative_url }}"><span>{{ strings.home }}</span></a>
+    {%- endif %}
+    {%- if page.translation %}
+    <a class="language" href="{{ page.translation | relative_url }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}">{{ strings.other_language }}</a>
+    {%- endif %}
+  </header>
+
+  <main>
+    {%- if page.title %}
+    <h1>{{ page.title }}</h1>
+    {%- endif %}
+    {%- if page.last_updated %}
+    <p class="updated">{{ strings.last_updated }}: <time datetime="{{ page.last_updated | date: '%Y-%m-%d' }}">{{ page.last_updated | date: '%Y-%m-%d' }}</time></p>
+    {%- endif %}
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    {%- if app %}
+    {%- assign app_root = '/' | append: page.app | append: '/' | append: lang_path -%}
+    <nav>
+      <a href="{{ app_root | append: 'support/' | relative_url }}">{{ strings.support }}</a>
+      <a href="{{ app_root | append: 'privacy/' | relative_url }}">{{ strings.privacy }}</a>
+    </nav>
+    {%- endif %}
+    <p>{{ strings.contact }}: <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+    <p>© {{ site.time | date: "%Y" }} 2Stacked Development</p>
+  </footer>
+</body>
+</html>

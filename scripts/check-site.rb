@@ -7,7 +7,7 @@ require "pathname"
 
 ROOT = Pathname(__dir__).parent
 SITE = ROOT / "_site"
-ALLOWED_PREFIXES = ["/", "#", "mailto:", "https://2stacked.github.io", "https://apps.apple.com", "https://www.apple.com/legal/"].freeze
+ALLOWED_PREFIXES = ["/", "#", "mailto:", "https://2stacked.github.io/", "https://apps.apple.com/", "https://www.apple.com/legal/"].freeze
 LANGS = %w[en fr].freeze
 
 APP_PAGES = ["", "privacy/", "support/"].freeze
@@ -43,7 +43,8 @@ pages.each do |file|
 
   doc.xpath("//@src | //@href").each do |attr|
     value = attr.value
-    next if ALLOWED_PREFIXES.any? { |p| value.start_with?(p) } || !value.match?(%r{\A[a-z]+:|\A//}i)
+    off_site = value.start_with?("//") || (value.match?(/\A[a-z][a-z0-9+.-]*:/i) && ALLOWED_PREFIXES.none? { |p| value.start_with?(p) })
+    next unless off_site
     failures << "#{url}: off-site #{attr.name}=#{value}"
   end
 
@@ -72,12 +73,11 @@ pages.each do |file|
   failures << "#{url}: translation #{other["href"]} does not link back" unless back.include?(url)
 end
 
-css = (SITE / "assets/site.css")
-if css.file?
-  failures << "site.css uses @import" if css.read.include?("@import")
-  failures << "site.css loads a url(http…)" if css.read.match?(/url\(\s*['"]?https?:/)
-else
-  failures << "missing assets/site.css"
+failures << "missing assets/site.css" unless (SITE / "assets/site.css").file?
+Pathname.glob(SITE / "**/*.css").each do |css|
+  name = css.relative_path_from(SITE)
+  failures << "#{name} uses @import" if css.read.include?("@import")
+  failures << "#{name} loads a url(http…)" if css.read.match?(%r{url\(\s*['"]?(https?:)?//})
 end
 
 begin

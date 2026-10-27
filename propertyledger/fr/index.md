@@ -18,7 +18,7 @@ acheteur, à un assureur ou au prochain propriétaire.
   couleurs de peinture.
 - **Documents** : reçus, garanties, factures, guides d'utilisation et assurances, avec photos ou fichiers joints.
 - **Intervenants** : les entrepreneurs et fournisseurs de services qui travaillent sur votre maison, et leurs
-  soumissions.
+  devis.
 - **Dépenses et projets** : ce qu'ont coûté chaque objet, chaque réparation et chaque rénovation.
 - **Chronologie** : chaque changement apporté au dossier de votre maison, par date.
 - **Rapport sur le logement** : tout le dossier de votre maison en PDF, à partager.

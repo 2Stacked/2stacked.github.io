@@ -23,8 +23,8 @@ widget de l'écran d'accueil affiche un résumé que l'app enregistre sur ce mê
 
 ## Synchronisation iCloud (facultative)
 
-La synchronisation iCloud reste désactivée tant que vous ne l'activez pas dans les Réglages de l'app. Une fois
-activée, vos fiches et vos photos se synchronisent par iCloud d'Apple dans votre propre base de données iCloud
+La synchronisation iCloud reste désactivée tant que vous n'activez pas Utiliser iCloud dans l'onglet Réglages de
+l'app (sous Données et synchronisation). Une fois activée, vos fiches et vos photos se synchronisent par iCloud d'Apple dans votre propre base de données iCloud
 privée, liée à votre compte Apple, pour apparaître sur vos autres appareils. 2Stacked Development n'a pas accès à
 ces données. Le traitement des données iCloud par Apple est régi par la
 [politique de confidentialité d'Apple](https://www.apple.com/legal/privacy/fr-ca/).
@@ -50,12 +50,16 @@ Les rappels sont des notifications programmées sur votre appareil. Rien n'est e
 ## Partage
 
 Votre rapport sur le logement en PDF, vos photos et vos fichiers ne quittent l'app que lorsque vous les partagez
-avec la feuille de partage, et seulement vers l'endroit que vous choisissez.
+avec la feuille de partage, et seulement vers l'endroit que vous choisissez. Lorsque vous touchez Appeler, Message
+ou E-mail sur un intervenant, son numéro ou son adresse est transmis à Téléphone, Messages ou Mail sur votre appareil.
+
+Si vous utilisez Siri, Raccourcis ou le widget de l'écran d'accueil, iOS affiche le nom de vos maisons pour que vous
+puissiez en choisir une. Cela se passe sur votre appareil; rien n'est envoyé à 2Stacked Development.
 
 ## Supprimer vos données {#supprimer-vos-donnees}
 
-Supprimez des fiches dans l'app, ou supprimez l'app pour tout effacer de cet appareil. Si la synchronisation iCloud
-est activée, supprimez aussi les données de PropertyLedger dans Réglages › [votre nom] › iCloud › Gérer le
+Supprimez des fiches dans l'app, ou supprimez l'app pour tout effacer de cet appareil. Si vous avez déjà activé la
+synchronisation iCloud, supprimez aussi les données de PropertyLedger dans Réglages › [votre nom] › iCloud › Gérer le
 stockage du compte.
 
 ## Enfants

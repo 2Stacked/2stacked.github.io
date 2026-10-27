@@ -11,24 +11,25 @@ description: Get help with PropertyLedger.
 ## Contact
 
 Write to [{{ site.contact_email }}](mailto:{{ site.contact_email }}). It helps to include your iPhone's iOS
-version, the app's version (Settings in the app), and what you were doing when the problem happened.
+version, the app's version (Settings tab › About › Version), and what you were doing when the problem happened.
 
 ## Common questions
 
 ### Is my data backed up?
 
-Your records are included in your iPhone's own backup (iCloud Backup or a computer backup). If you turn on iCloud
-sync in the app's Settings, they're also kept in your private iCloud database.
+Your records are included in your iPhone's own backup (iCloud Backup or a computer backup). If you turn on Use
+iCloud in the app's Settings tab, they're also kept in your private iCloud database.
 
 ### How do I move to a new iPhone?
 
-Turn on iCloud sync before you switch, and your records appear on the new iPhone once you sign in to the same Apple
-Account. Restoring the new iPhone from a backup of the old one also brings them across.
+Turn on Use iCloud in the app's Settings tab before you switch. It takes effect the next time you open the app.
+Your records then appear on the new iPhone once you sign in to the same Apple Account. Restoring the new iPhone
+from a backup of the old one also brings them across.
 
 ### How do I share my home's record?
 
-Open your home's details from the Home tab, then choose Share Home Report. You can choose what goes in the report
-before you share the PDF.
+On the Home tab, tap your home's name at the top to open About this home, then tap Share Home Report. You can
+choose what goes in the report before you share the PDF.
 
 ### How do I delete everything?
 

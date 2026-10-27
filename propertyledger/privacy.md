@@ -23,7 +23,7 @@ shows a summary that the app saves on the same device.
 
 ## iCloud sync (optional)
 
-iCloud sync is off until you turn it on in the app's Settings. When it's on, your records and photos sync through
+iCloud sync is off until you turn on Use iCloud in the app's Settings tab (under Data & Sync). When it's on, your records and photos sync through
 Apple's iCloud to your own private iCloud database, under your Apple Account, so they appear on your other devices.
 2Stacked Development can't see that data. Apple's handling of iCloud data is covered by
 [Apple's privacy policy](https://www.apple.com/legal/privacy/).
@@ -49,11 +49,16 @@ Reminders are notifications scheduled on your device. Nothing is sent to a serve
 ## Sharing
 
 Your Home Report PDF, photos and files leave the app only when you share them with the share sheet, and only to the
-place you choose.
+place you choose. When you tap Call, Message or Email on a person, their number or address is handed to Phone,
+Messages or Mail on your device.
+
+If you use Siri, Shortcuts or the home-screen widget, iOS shows the names of your homes so you can pick one. This
+happens on your device; nothing is sent to 2Stacked Development.
 
 ## Deleting your data
 
-Delete records in the app, or delete the app to remove everything on that device. If iCloud sync is on, also remove
+Delete records in the app, or delete the app to remove everything on that device. If you've ever turned on iCloud
+sync, also remove
 PropertyLedger's data in Settings › [your name] › iCloud › Manage Account Storage.
 
 ## Children
